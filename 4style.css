@@ -1,0 +1,245 @@
+:root {
+    --tealy:#a2b0c9;
+  }
+  
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Lato';
+    outline: none;
+    border:none;
+    text-decoration: none;
+    transition: .2s linear;
+  }
+  
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+  }
+  
+  section {
+    padding: 3rem; 9%;
+  }
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color:#333;
+    padding:1rem;
+    margin:2rem 0;
+    background: #a2b0c9;
+    font-family: 'Bolondi';
+    color: white;
+}
+
+.heading span {
+    font-family: 'Bolondi';
+    color:#555e7a;
+}
+
+
+  button {
+    margin-left: 320px;
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #6f7a9a;
+    color:#fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+  }
+
+  button:hover{
+    background:var(--tealy)
+  }
+
+
+  /* NAVIGATION BAR */
+  header {
+    position: fixed;
+    top:0; left:0; right:0;
+    background: #fff;
+    padding:2rem 9%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+   z-index:1000;
+  box-shadow:  0 .5rem 1rem rgba(0,0,0,.1);
+  }
+  
+  header .logo {
+    font-size:3rem;
+    color:#333;
+    font-weight:bolder;
+  }
+  
+  header .logo span {
+    color:var(--tealy);
+  }
+  
+  header .navbar a{
+    font-size:2rem;
+    padding:0 1.5rem;
+    color:#666;
+  }
+  
+  header .navbar a:hover{
+    color:var(--tealy);
+  }
+  
+  header #toggler{
+    display:none;
+  }
+  
+  header .fa-bars{
+    font-size:3rem;
+    color:#333;
+    border-radius:.5rem;
+    padding:.5rem 1.5rem;
+    cursor:pointer;
+    border:.1rem solid rgba(0,0,0,.3);
+    display: none;
+  }
+
+
+    /* HOME MAIN */
+  .home {
+    display:flex;
+    align-items:center;
+    min-height: 100vh;
+    background:url('bg2.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+  }
+
+  .home .content {
+    max-width: 90rem;
+  }
+
+  .home .content h3 {
+    font-size: 9rem;
+    font-family:'bodoni';
+    font-weight: lighter;
+    color: #6f7a9a;
+    margin-left: 130px;
+    text-shadow: 2px 2px 4px white
+  }
+
+  .home .content span {
+    font-size: 3rem;
+    color: #4d7428;
+    padding: 1rem 0;
+    line-height: 1.5;
+    font-style: bold;
+    font-weight: bold;
+  }
+
+  .home .content p {
+    font-weight: bolder;
+    font-size: 2.2rem;
+    color: #000000;
+    padding: 1rem 0;
+    line-height: 1.3;
+    text-align: center;
+    text-shadow: 1px 1px 3px #ffffff, 0 0 30px rgb(255, 255, 255), 0 0 5px #fff;
+  }
+
+  .home .content hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1.5px;
+    border-color: #92b07d;
+  }
+
+    /* ABOUT ME */
+.about .row {
+    display: flex;
+    align-items: center;
+    gap:2rem;
+    flex-wrap:wrap;
+    padding:2rem 0;
+    padding-bottom: 3rem;
+}
+
+.about .row .video-contain {
+    flex:1 1 40rem;
+    position: relative;
+
+}
+
+.about .row .video-contain img{
+    width:100%;
+    border:1.5rem solid #fff;
+    border-radius: .5rem;
+    box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.about .row .video-contain h3{
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    font-size: 3rem;
+    background: #fff;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+
+.about .row .content {
+    flex:1 1 40rem;
+}
+
+.about .row .content h3{
+    font-size: 3.7rem;
+    color: #333;
+}
+
+.about .row .content p{
+    font-size: 2.3rem;
+    color: #999;
+    padding: .5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+
+/* ICONS */
+.icons-cont {
+    background:#eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.icons-cont .icons {
+    background: #fff;
+    border: .1rem solid rgba(0,0,0,.1);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex:1 1 25rem;
+}
+
+.icons-cont .icons h3 {
+    color: #333;
+    padding-bottom: .5rem;
+    font-size: 1.5rem;
+}
+
+.icons-cont .icons span {
+    color: #555;
+    font-size: 1.3rem;
+}

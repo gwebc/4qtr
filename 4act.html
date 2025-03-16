@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>4TH QTR ACTIVITIES</title>
+        <!--ICONS-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!--FONTS-->
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+        <link href="https://fonts.cdnfonts.com/css/bodoni" rel="stylesheet">
+
+        <style>
+          :root {
+    --tealy:#a2b0c9;
+  }
+  
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Lato';
+    outline: none;
+    border:none;
+    text-decoration: none;
+    transition: .2s linear;
+    font-family: 'Lato';
+
+  }
+  
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+  }
+
+  body {
+    background: url(bg1.png);
+  }
+
+  header {
+    position: fixed;
+    top:0; left:0; right:0;
+    background: #fff;
+    padding:2rem 9%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+     z-index:1000;
+     box-shadow:  0 .5rem 1rem rgba(0,0,0,.1);
+  }
+  
+  header .logo {
+    font-size:3rem;
+    color:#333;
+    font-weight:bolder;
+  }
+  
+  header .logo span {
+    color:var(--tealy);
+  }
+  
+  header .navbar a{
+    font-size:2rem;
+    padding:0 1.5rem;
+    color:#666;
+  }
+  
+  header .navbar a:hover{
+    color:var(--tealy);
+  }
+  
+  header #toggler{
+    display:none;
+  }
+  
+  header .fa-bars{
+    font-size:3rem;
+    color:#333;
+    border-radius:.5rem;
+    padding:.5rem 1.5rem;
+    cursor:pointer;
+    border:.1rem solid rgba(0,0,0,.3);
+    display: none;
+  }
+
+  h2 {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .vcenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  p {
+    display: block;
+    text-align: center;
+    font-size: 2rem;   
+  }
+
+  .gallery-container {
+            position: relative;
+            width: 200%;
+            max-width: 1100px;
+            margin: auto;
+        }
+        .image {
+            width: 100%;
+            display: none;
+        }
+        .image.active {
+            display: block;
+        }
+        .heading {
+            margin: 10px 0;
+            font-size: 3rem;
+            text-align: center
+        }
+        .arrow {
+            cursor: pointer;
+            font-size: 2rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            outline: none;
+            padding: 10px;
+        }
+        .arrow.left {
+            left: 0;
+        }
+        .arrow.right {
+            right: 0;
+        }
+
+
+
+        </style>
+      </head>      
+
+      <body>
+        <!--NAVBAR-->
+  <header>
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+    
+    <a href="#" class="logo">gwcc <span>✦</span></a>
+    
+    <nav class="navbar">
+      <a href="index.html">home</a>
+      <a href="#">activities</a>
+      <a href="4l.html">lessons</a>
+      <a href="4r.html">reflection</a>
+    </nav>
+  </header>
+  <br><br><br><br><br><br><br><br>
+
+  <div class="gallery-container">
+    <button class="arrow left" onclick="changeImage(-1)">&#8592;</button>
+    <img src="image1.jpg" class="image active" alt="Image 1">
+    <img src="image2.jpg" class="image" alt="Image 2">
+    <img src="image3.jpg" class="image" alt="Image 3">
+    <button class="arrow right" onclick="changeImage(1)">&#8594;</button>
+    <div class="heading" id="image-heading">Heading for Image 1</div>
+</div>
+
+<script>
+    const images = document.querySelectorAll('.image');
+    const heading = document.getElementById('image-heading');
+    const headings = [
+        "Streetdance Competition",
+        "One Act Play",
+        "Battle of the Bands"
+    ];
+    let currentIndex = 0;
+
+    function changeImage(direction) {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + direction + images.length) % images.length;
+        images[currentIndex].classList.add('active');
+        heading.textContent = headings[currentIndex];
+    }
+</script>
+      </body>
+</html>

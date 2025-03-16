@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>4TH QUARTER PORTFOLIO</title>
+  <link rel="stylesheet" type="text/css" href="4style.css">
+  <!--ICONS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--FONTS-->
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+  <link href="https://fonts.cdnfonts.com/css/bodoni" rel="stylesheet">
+</head>
+<>
+  
+  
+  <!--NAVBAR-->
+  <header>
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+    
+    <a href="#" class="logo">gwcc <span>✦</span></a>
+    
+    <nav class="navbar">
+      <a href="#home">home</a>
+      <a href="4act.html">activities</a>
+      <a href="4l.html">lessons</a>
+      <a href="4r.html">reflection</a>
+    </nav>
+  </header>
+  
+  <section class="home" id="home">
+    <div class="content">
+      <h3> Gwen Cabutihan </h3>
+      <p>Hello! Welcome to my final e-portfolio for this school year. This contains the activities and lessons I've accomplished from the fourth quarter of Grade 9, as well as my reflection for both the 4th quarter and the overall school year.
+        <br> <br>
+        <i> If you scroll down a bit, you'll see my <b>about me</b> section. Enjoy browsing! </i></p>
+        <button onclick="viewQ()">View Previous Quarters</button>
+
+        <script>
+            function viewQ() {
+                let userInput = prompt("Which quarter do you want to view? (First or Second)");
+    
+                if (userInput) {
+                    userInput = userInput.toLowerCase();
+                    if (userInput === "first") {
+                        window.location.href = "https://gwenc.neocities.org/";
+                    } else if (userInput === "second") {
+                        window.location.href = "https://gwebc.github.io/2nd-qtr/";
+                    } else {
+                        alert("Please enter a valid quarter (First or Second).");
+                    }
+                } else {
+                    alert("Please enter a quarter to be viewed.");
+                }
+            }
+        </script>
+    </div>
+  </section>
+  
+  <section class="about" id="about">
+
+    <h1 class="heading"> <span> About </span> Me </h1>
+
+    <div class="row">
+
+        <div class="video-contain">
+            <img src="blcat.gif">
+            <h3>basic information</h3>
+        </div>
+
+        <div class="content">
+            <h3>introduction</h3>
+            <p>Hi, my full name is Erin Gwen Cabutihan. I'm currently 14 years old, and my birthday is on April 7. I enjoy drawing and painting. I have 2 older siblings who are over a decade older than me, and a sibling just 3 years younger than me. I also have 2 cats: Oddey and Cheeto.</p>
+            
+            <br><br>
+
+            <h3>likes & dislikes</h3>
+            <p>❤ Cats, coffee, pasta, music, ramen</p>
+            <p>👎 Insects, needles, mint chocolate, coconut</p>
+
+        </div>
+
+    </div>
+  </section>
+
+
+  <!--FAV MUSIC-->
+<section class="icons-cont">
+
+    <div class="icons">
+        <div class="info">
+        <h3>pick your brain</h3>
+        <span>Lyn Lapid</span>
+        <audio controls>
+                <source src="pyb.mp3" type="audio/mp3">
+            </audio>
+       </div>
+    </div>
+
+    <div class="icons">
+        <div class="info">
+        <h3>Bad Reviews</h3>
+        <span>Sabrina Carpenter</span>
+        <audio controls>
+                <source src="br.mp3" type="audio/mp3">
+            </audio>
+       </div>
+    </div>
+
+    <div class="icons">
+        <div class="info">
+        <h3>Beaches</h3>
+        <span>beabadoobee</span>
+        <audio controls>
+                <source src="bea.mp3" type="audio/mp3">
+            </audio>
+       </div>
+    </div>
+
+    <div class="icons">
+        <div class="info">
+        <h3>Valentina</h3>
+        <span>Daniel Caesar</span>
+        <audio controls>
+            <source src="vale.mp3" type="audio/mp3">
+        </audio>
+       </div>
+    </div>
+
+</section>
+
+
+</body>
+</html>
